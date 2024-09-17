@@ -41,4 +41,8 @@ describe('Funcionalidade: Cadastro', () => {
         cy.get('.woocommerce-Button').click()
         cy.get('.woocommerce-message').should('exist')
     });
+    it.only('Deve completar o cadastro com sucesso - Usando comando customizado', () => {
+        cy.preCadastro(faker.internet.email(), 'alo@Alo15', faker.person.firstName(), faker.person.lastName())
+        cy.get('.woocommerce-message').should('exist')
+    });
 });
