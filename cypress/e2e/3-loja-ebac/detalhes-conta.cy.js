@@ -14,5 +14,4 @@ cy.detalhesConta('João', 'Jr.', 'Jr.QA')
 cy.get('.woocommerce-message').should('contain', 'Detalhes da conta modificados com sucesso.')
 });
 
-
 });
